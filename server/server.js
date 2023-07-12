@@ -1,0 +1,20 @@
+/*
+server(folder)
+    server.js(file)
+    .env (file)
+    middlewares (folder)
+        isAuhtenticated.js (file)
+    models (folder)
+        user.js (file)
+        channel.js (file)
+        video.js   (file)
+    routes (folder)
+        user.js (file)
+        channel.js (file)
+        video.js   (file)   
+    controllers (folder)
+        user.js (file)
+        channel.js (file)
+        video.js   (file)  
+
+*/
