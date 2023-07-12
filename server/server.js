@@ -1,8 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const app = express();
+app.use(cors());
+app.use(cookieParser());
+app.use(express.json());
 
 mongoose
   .connect("mongodb://localhost/youtube-clone")
