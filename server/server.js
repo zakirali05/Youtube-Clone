@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const userRoutes = require("./routes/user.js");
@@ -12,6 +13,7 @@ const app = express();
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
+app.use(bodyParser.json());
 app.use("/api/v1", userRoutes);
 app.use("/api/v1", videoRoutes);
 app.use("/api/v1", channelRoutes);
